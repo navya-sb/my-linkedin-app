@@ -1,0 +1,361 @@
+{
+	"info": {
+		"_postman_id": "62b9800c-16a5-4785-aa71-6f5f1ed2087e",
+		"name": "MyLinkdin_Postman_Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "20486098"
+	},
+	"item": [
+		{
+			"name": "Interviews - Create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJraWQiOiJIdWpzX2F6UnFJUzBpSE5YNEZIRk96eUwwdjE4RXJMdjNyZDBoalpNUnJFIiwidHlwIjoiSldUIiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiIiLCJmYXN0IjoiIiwiY3JpZCI6IlVuYXZhaWxhYmxlIiwiYXpwIjoiU0t0OGVvUEtGbmgyZ0pBVkdnTEtLNEQxSlJHc2s2NU8iLCJzdWJfaWQiOiIiLCJzY29wZSI6ImFkZHJlc3NlcyBpbnRlcm5hdGlvbmFsLXByaWNlcyBzZXJ2aWNlLXN0YW5kYXJkcyBwcmljZXMgc2hpcG1lbnRzIiwib3JnYW5pemF0aW9uX2lkIjoiMCIsImlzcyI6Imh0dHBzOlwvXC9rZXljLnVzcHMuY29tXC9yZWFsbXNcL1VTUFMiLCJleHAiOjE3MTc2ODM2MDEsImlhdCI6MTcxNzY1NDgwMSwianRpIjoiODk5OGRhYjgtZWIxMi00OWE0LThmMDUtODBhNGFjYzgwMGNlIn0.L1ppVVpMuqhg38EmfP_tYRzlMBuMhzzKmvH-k6vyggIi4UpDeD8oMpkbQHvX6GXbHL5s86cP9CUeLmoz6rdphOf6nKfQNPYcSBqXn5YPkCs6MKYKOdItuh_RvQpq9YxXvZqIb8xT1GTgzFE-bDSv24XBpmUolvLhkdDW2EaBsu9FgD6N1on0WeqrWurOZiQHt068ejysYOmDuhN2ICs7c33crtOC2NjcBLZqd6BYql5AV2fQA6bjqw_mqr7q-3G9w9_4vO8JWmkpRabl47gtJCj3pEkiiSr-6C6KWOgh0Cqm_F9lqaUj7f9aC0ezLoOPiulXwnpEotuBb7R6hGwjuA"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"job_post_id\":2,\r\n  \"application_id\": 2,\r\n  \"interview_date\": \"2023-06-15 10:00:00\",\r\n  \"status\": \"scheduled\",\r\n  \"candidate_id\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/interviews"
+			},
+			"response": []
+		},
+		{
+			"name": "Job-posts - Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Laravel developer\",\r\n  \"employer_id\": 2,\r\n  \"salary\": \"550000\",\r\n  \"description\": \"Laravel developer.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/job-posts"
+			},
+			"response": []
+		},
+		{
+			"name": "Job post - Listing",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/api/job-posts"
+			},
+			"response": []
+		},
+		{
+			"name": "Jobpost - Print specific job",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/api/job-posts/5"
+			},
+			"response": []
+		},
+		{
+			"name": "Job Post - Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Senior Software Engineer\",\r\n  \"employer_id\": 1,\r\n  \"salary\": \"120000\",\r\n  \"description\": \"Lead the software development team.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/job-posts/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Job Post - Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8000/api/job-posts/2"
+			},
+			"response": []
+		},
+		{
+			"name": "Employers - Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"MNO\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/employers"
+			},
+			"response": []
+		},
+		{
+			"name": "Employers Listing",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/api/employers"
+			},
+			"response": []
+		},
+		{
+			"name": "Employers - Print specific employer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/api/employers/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Employer - Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Tech Corporation\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/employers/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Employers - Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8000/api/employers/2"
+			},
+			"response": []
+		},
+		{
+			"name": "Candidates - Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Test Data\",\r\n  \"email\":\"testdata@demo.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/candidates"
+			},
+			"response": []
+		},
+		{
+			"name": "CV - Upload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file_path",
+							"type": "file",
+							"src": "/C:/wamp64/www/MyLinkdin/MyLinkedIn/instructions_for_use.pdf"
+						},
+						{
+							"key": "candidate_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:8000/api/cvs"
+			},
+			"response": []
+		},
+		{
+			"name": "Cvs - Listing",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/api/cvs"
+			},
+			"response": []
+		},
+		{
+			"name": "CVS - Print specific CV",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/api/cvs/1"
+			},
+			"response": []
+		},
+		{
+			"name": "CVS - Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8000/api/cvs/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Applications - Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"job_post_id\": 3,\r\n  \"candidate_id\": 1,\r\n  \"status\": \"pending\",\r\n  \"cv_id\":2\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/applications"
+			},
+			"response": []
+		},
+		{
+			"name": "Applications - Listing",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/api/applications"
+			},
+			"response": []
+		},
+		{
+			"name": "Applications - Print specific application",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/api/applications/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Applications - Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\":\"Accepted\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/applications/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Applications - Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8000/api/applications/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Interviews - Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"application_id\": 2,\r\n  \"interview_date\": \"2023-06-15 10:00:00\",\r\n  \"status\": \"Not scheduled\",\r\n  \"job_post_id\":3,\r\n  \"candidate_id\":3\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/interviews"
+			},
+			"response": []
+		},
+		{
+			"name": "Interviews - Listing",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/api/interviews"
+			},
+			"response": []
+		},
+		{
+			"name": "Interviews - Print specific interview",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/api/interviews/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Interviews - Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\": \"Scheduled\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/interviews/6"
+			},
+			"response": []
+		},
+		{
+			"name": "Interviews - Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8000/api/interviews/2"
+			},
+			"response": []
+		}
+	]
+}
